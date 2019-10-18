@@ -6,6 +6,12 @@
     [System.Collections.ArrayList] $encryptedFile = @()   # File's Bytes
 
     switch ($command[0]) {
+
+        "run" {
+        
+            [Diagnostics.Process]::Start($command[1])
+        
+        }
         
         "encrypt" { # encrypt filePath
 
